@@ -1,24 +1,45 @@
 package br.com.senai.ui.contas;
 
-
+import br.com.senai.ui.FrameTela;
 
 public class ContasCalculadora {
 	
-	int contador = 0;
+	private int multiplicando;
+	private int Maxmultiplicador;
 	
-	public void calculo () {
+	public void setMultiplicando(int multiplicando) {
+		this.multiplicando = multiplicando;
+	}
+	public int getMultiplicando() {
+		return multiplicando;
+	}
+	public void setMultiplicador(int multiplicador) {
+		this.Maxmultiplicador = multiplicador;
+	}
+	public int getMultiplicador() {
+		return Maxmultiplicador;
+	}
+	
+	public String[] calcular() {
 		
-				
-		do {
-					
-		System.out.println("1");
-					
-		}while(contador < 4);
-				
+		String[] tabuada = new String[Maxmultiplicador + 1];
+		
+		for (int index =0; index <= Maxmultiplicador; index++) {
+			
+			int resultado = multiplicando * index;
+			tabuada[index] = multiplicando + " x " + index + " = " + resultado;
+			
+		}
+		
+		
+		return tabuada;
+		
+	}
+	
 
 }
 	
 		
-}
+
 	
 
